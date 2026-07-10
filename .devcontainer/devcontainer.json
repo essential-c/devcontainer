@@ -1,0 +1,4 @@
+{
+	"name": "essential-c-devcontainer",
+	"image": "olivierpierre/essential-c-devcontainer"
+}
