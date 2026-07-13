@@ -9,4 +9,9 @@ RUN git clone https://github.com/essential-c/check50.git /tmp/check50
 RUN cd /tmp/check50 && pip install . --break-system-packages --root-user-action=ignore
 
 RUN mkdir /root/workspace
+
+# TODO more folders
+COPY devcontainer/01-intro /root/workspace
+COPY devcontainer/02-basics /root/workspace
+
 WORKDIR /root/workspace
