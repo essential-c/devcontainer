@@ -13,5 +13,7 @@ RUN mkdir /root/workspace
 # TODO more folders
 COPY devcontainer/01-intro /root/workspace
 COPY devcontainer/02-basics /root/workspace
+COPY devcontainer/03-mm-libc /root/workspace
+COPY devcontainer/06-security /root/workspace
 
 WORKDIR /root/workspace
