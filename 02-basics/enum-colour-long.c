@@ -1,14 +1,16 @@
 #include <stdio.h>
 
-typedef enum {
+enum e_colour {
     RED,
     BLUE,
     GREEN,
     YELLOW
-} color;
+};
+
+typedef enum e_colour colour;
 
 int main(int argc, char **argv) {
-    color c1 = BLUE;
+    colour c1 = RED;
 
     switch(c1) {
         case RED:
@@ -28,7 +30,7 @@ int main(int argc, char **argv) {
             break;
 
         default:
-            printf("Unknown color\n");
+            printf("Unknown colour\n");
     }
 
     printf("RED was assigned: %d\n", RED);

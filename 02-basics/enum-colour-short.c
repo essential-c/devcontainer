@@ -1,14 +1,14 @@
 #include <stdio.h>
 
-enum colour {
+typedef enum {
     RED,
     BLUE,
     GREEN,
     YELLOW
-};
+} colour;
 
 int main(int argc, char **argv) {
-    enum colour c1 = BLUE;
+    colour c1 = GREEN;
 
     switch(c1) {
         case RED:
