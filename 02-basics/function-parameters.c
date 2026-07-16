@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-void my_function(int parameter) {
-    parameter = 12; // does not update x in main
+void my_function(int p) {
+    p = 12; // does not update x in main
 }
 
 int main() {
