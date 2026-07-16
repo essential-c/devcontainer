@@ -104,7 +104,7 @@ int main(int argc, char **argv) {
 
     preprocess_input(argv[1]);
 
-    if(!strncmp(password, argv[1], strlen(password)))
+    if (!strncmp(password, argv[1], strlen(password)))
         security_critical_function();
     else
         printf("Unauthorized user!\n");

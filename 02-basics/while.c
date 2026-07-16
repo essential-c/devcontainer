@@ -2,19 +2,18 @@
 
 int main() {
     int x = 10;
-
     printf("------ while loop:\n");
-    while (x > 0) {
+    while (x > 0) {              // loops 10 times
         printf("x is %d\n", x);
         x = x - 1;
     }
 
-    x = 10;
+    int y = 0;
     printf("------ do ... while loop:\n");
     do {
-        printf("x is %d\n", x);
-        x = x - 1;
-    } while (x > 0);
+        printf("y is %d\n", x);
+        y = y - 1;
+    } while (y > 0); // although this condition is always false, body is executed once
 
     return 0;
 }

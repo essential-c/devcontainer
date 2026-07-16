@@ -8,13 +8,13 @@ int main(int argc, char **argv) {
 
     /* open the file, truncate it if it exists, create it otherwise */
     f1 = fopen("test-file.txt", "w");
-    if(f1 == NULL) {
+    if (f1 == NULL) {
         perror("fopen");
         return -1;
     }
 
     /* write 13 chunks of 2 bytes from alphabet into the file */
-    if(fwrite(alphabet, 2, 13, f1) != 13) {
+    if (fwrite(alphabet, 2, 13, f1) != 13) {
         perror("fwrite");
         return -1;
     }
@@ -22,13 +22,13 @@ int main(int argc, char **argv) {
     /* close the stream, re-open the file in read mode */
     fclose(f1);
     f2 = fopen("test-file.txt", "r");
-    if(f2 == NULL) {
+    if (f2 == NULL) {
         perror("fopen");
         return -1;
     }
 
     /* read 26 chunks of 1 byte from the file into buffer */
-    if(fread(buffer, 1, 26, f2) != 26) {
+    if (fread(buffer, 1, 26, f2) != 26) {
         perror("fread");
         return -1;
     }

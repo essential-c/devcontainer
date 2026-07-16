@@ -11,19 +11,19 @@ int main(int argc, char **argv) {
     char *buffer = "hello, world";
 
     fd1 = open(file_path, O_WRONLY | O_TRUNC | O_CREAT, S_IRUSR | S_IWUSR);
-    if(fd1 == -1) {
+    if (fd1 == -1) {
         printf("error with open\n");
         return -1;
     }
 
     /* write 'hello, world!' in the file */
-    if(write(fd1, buffer, strlen(buffer)) != strlen(buffer)) {
+    if (write(fd1, buffer, strlen(buffer)) != strlen(buffer)) {
         printf("issue writing\n");
         close(fd1); return -1;
     }
 
     /* write it again */
-    if(write(fd1, buffer, strlen(buffer)) != strlen(buffer)) {
+    if (write(fd1, buffer, strlen(buffer)) != strlen(buffer)) {
         printf("issue writing\n");
         close(fd1); return -1;
     }

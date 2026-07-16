@@ -8,7 +8,7 @@ int main(int argc, char **argv) {
     printf("Seconds since the epoch: %lu.%06lu\n", tv.tv_sec, tv.tv_usec);
 
     gettimeofday(&start, NULL);
-    for(int i=0; i<1000000000; i++);
+    for (int i=0; i<1000000000; i++);
     gettimeofday(&stop, NULL);
 
     timersub(&stop, &start, &elapsed);

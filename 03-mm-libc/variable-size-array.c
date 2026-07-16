@@ -3,7 +3,7 @@
 
 int main(int argc, char **argv) {
 
-    if(argc != 2) {
+    if (argc != 2) {
         printf("Usage: %s <array size>\n", argv[0]);
         return -1;
     }
@@ -11,7 +11,7 @@ int main(int argc, char **argv) {
     int size = atoi(argv[1]);
     int array[size]; // size only known at runtime
 
-    for(int i=0; i<size; i++) {
+    for (int i=0; i<size; i++) {
         array[i] = i;
         printf("array[%d] = %d\n", i, array[i]);
     }

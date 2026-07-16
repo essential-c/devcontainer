@@ -18,5 +18,7 @@ int main(int argc, char **argv) {
             printf("x is neither 1, nor 2, nor 3\n");
     }
 
+    printf("switch done\n");
+
     return 0;
 }

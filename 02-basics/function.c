@@ -13,7 +13,7 @@ int main() {
 
     printf("result: %d\n", sum);
 
-    if(add_two_integers(x, y))
+    if (add_two_integers(x, y))
         printf(" (non zero)\n");
     else
         printf(" (zero)\n");

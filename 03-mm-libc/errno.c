@@ -9,7 +9,7 @@ int main(int argc, char **argv) {
 
     /* Open always returns -1 on failure, but it can be due to many different
      * reasons */
-    if(fd == -1) {
+    if (fd == -1) {
         printf("open failed! errno is: %d\n", errno);
 
         /* errno is an integer code corresponding to a given reason. To format

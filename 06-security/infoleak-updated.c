@@ -8,14 +8,14 @@ char entered_password[128];
 
 int main(int argc, char **argv) {
     // Print welcome message character by character
-    for(int i=0; i<27; i++) {  // Oopsie!
+    for (int i=0; i<27; i++) {  // Oopsie!
         printf("%c", welcome_message[i]);
     }
 
     printf("Please input the password:\n");
     scanf("%s", entered_password);
 
-    if(!strcmp(entered_password, password)) {
+    if (!strcmp(entered_password, password)) {
         printf("Passowrd ok!\n");
     /* ... */
     } else {

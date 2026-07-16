@@ -9,7 +9,7 @@ int main(int argc, char **argv) {
     ptr1 = malloc(10 * sizeof(double));
     ptr2 = malloc(30 * sizeof(int));
 
-    if(ptr1 == NULL || ptr2 == NULL) { /* ... */ }
+    if (ptr1 == NULL || ptr2 == NULL) { /* ... */ }
 
     /* ... */
 

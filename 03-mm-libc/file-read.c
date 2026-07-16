@@ -10,10 +10,10 @@ int main(int argc, char **argv) {
     int fd2 = open("./test", O_RDONLY, 0x0);
     int bytes_read;
 
-    if(fd2 == -1) { printf("error open\n"); return -1; }
+    if (fd2 == -1) { printf("error open\n"); return -1; }
 
     /* read 9 bytes */
-    if(read(fd2, buffer2, 9) != 9) {
+    if (read(fd2, buffer2, 9) != 9) {
         printf("error reading\n"); close(fd2); return -1;
     }
 
@@ -23,7 +23,7 @@ int main(int argc, char **argv) {
 
     /* read 9 bytes again */
     bytes_read = read(fd2, buffer2, 9);
-    if(bytes_read != 9) {
+    if (bytes_read != 9) {
         printf("error reading\n"); close(fd2); return -1;
     }
 
