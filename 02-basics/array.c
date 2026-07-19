@@ -8,10 +8,14 @@ int main() {
     array[2] = 30;
     array[3] = 40;
 
+    int x = array[1];
+
     printf("array[%d] contains %d\n", 0, array[0]);
     printf("array[%d] contains %d\n", 1, array[1]);
     printf("array[%d] contains %d\n", 2, array[2]);
     printf("array[%d] contains %d\n", 3, array[3]);
+
+    printf("x: %d\n", x);
 
     return 0;
 }
