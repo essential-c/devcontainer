@@ -1,20 +1,27 @@
 #include <stdio.h>
-#include <sys/time.h> // needed for gettimeofday
+#include <time.h> // needed for clock_gettime
 
 int main(int argc, char **argv) {
-    struct timeval tv, start, stop, elapsed;
+    struct timespec ts, start, stop, elapsed;
 
-    gettimeofday(&tv, NULL);
-    printf("Seconds since the epoch: %lu.%06lu\n", tv.tv_sec, tv.tv_usec);
+    clock_gettime(CLOCK_REALTIME, &ts);
+    printf("Seconds since the epoch: %ld.%09ld\n", ts.tv_sec, ts.tv_nsec);
 
-    gettimeofday(&start, NULL);
-    for (int i=0; i<1000000000; i++);
-    gettimeofday(&stop, NULL);
+    clock_gettime(CLOCK_MONOTONIC, &start);
+    for (int i = 0; i < 1000000000; i++);
+    clock_gettime(CLOCK_MONOTONIC, &stop);
 
-    timersub(&stop, &start, &elapsed);
+    // subtract the two timestamps: stop - start
+    elapsed.tv_sec = stop.tv_sec - start.tv_sec;
+    elapsed.tv_nsec = stop.tv_nsec - start.tv_nsec;
 
-    printf("Busy loop took %lu.%06lu seconds\n", elapsed.tv_sec,
-            elapsed.tv_usec);
+    if (elapsed.tv_nsec < 0) {
+        elapsed.tv_sec--;
+        elapsed.tv_nsec += 1000000000L;
+    }
+
+    printf("Busy loop took %ld.%09ld seconds\n",
+        elapsed.tv_sec, elapsed.tv_nsec);
 
     return 0;
 }
