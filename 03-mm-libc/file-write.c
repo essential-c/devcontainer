@@ -16,7 +16,7 @@ int main(int argc, char **argv) {
         return -1;
     }
 
-    /* write 'hello, world!' in the file */
+    /* write 'hello, world' in the file */
     if (write(fd1, buffer, strlen(buffer)) != strlen(buffer)) {
         printf("issue writing\n");
         close(fd1); return -1;
