@@ -71,5 +71,5 @@ From there you can compile the source file and run the resulting program in a co
 
 ## Completing the Book's Programming Exercises
 
-TODO.
+See the instructions given in the book and try to complete the [sample exercise](https://github.com/essential-c/exercises/blob/main/01-intro/01-sample/README.md).
 
