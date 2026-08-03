@@ -16,7 +16,7 @@ Because of its seamless compatibility and deployment, it is the prefered method 
 Codespaces is in absolute a paid feature but the free tier suffices to complete the book's exercises and run its code samples.
 If somehow the free tier is not enough, see alternate solutions below.
 
-To deploy a suitable Codespace instance, simply go to the [repository page on GitHub](https://github.com/essential-c/devcontainer), and click on `Use this template` then `Open in a codespace`:
+To deploy a suitable Codespace instance, simply go to the [repository page on GitHub](https://github.com/essential-c/devcontainer), and click on `<> Code` then `Codespaces` and finally click the `+` button:
 
 <img width="200" src=".include/launch-codespaces.png">
 
