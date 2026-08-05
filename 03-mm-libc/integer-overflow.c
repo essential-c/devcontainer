@@ -14,7 +14,8 @@ int main(int argc, char **argv) {
     // (B) standard unsigned representation, max number an unsigned int can store
     // (C) addition result
     // (D) result gets converted to int (expected by %d), truncate MSB to get 32 bits
-    // Solution: use %ld rather than %d to store the result on 64 bits
 
+    // Solution: use %ld rather than %d to store the result on 64 bits
+    printf("%ld\n", i + ui);
     return 0;
 }
