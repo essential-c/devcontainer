@@ -1,20 +1,28 @@
-FROM ubuntu:26.04
+FROM ubuntu:24.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y build-essential valgrind python3 \
     vim bash-completion git gdb python3-pip clang afl++
 
+RUN mkdir -p /root/workspace/code-snippets
+
+COPY devcontainer/01-intro /root/code-snippets/workspace/01-intro
+COPY devcontainer/02-basics /root/code-snippets/workspace/02-basics
+COPY devcontainer/03-mm-libc /root/code-snippets/workspace/03-mm-libc
+COPY devcontainer/04-building-debugging /root/code-snippets/workspace/04-building-debugging
+COPY devcontainer/05-use-cases /root/workspace/code-snippets/05-use-cases
+COPY devcontainer/06-security /root/workspace/code-snippets/06-security
+
+# This argument, combined with invoking docker build with -build-arg
+# CACHEBUST=$(date +%s), triggers the rebuild of everything that
+# follows independently of the cache. Needed as the git repos evolve
+ARG CACHEBUST=1
+
 RUN git clone https://github.com/essential-c/check50.git /tmp/check50
 RUN cd /tmp/check50 && pip install . --break-system-packages --root-user-action=ignore
 
-RUN mkdir /root/workspace
-
-COPY devcontainer/01-intro /root/workspace/01-intro
-COPY devcontainer/02-basics /root/workspace/02-basics
-COPY devcontainer/03-mm-libc /root/workspace/03-mm-libc
-COPY devcontainer/04-building-debugging /root/workspace/04-building-debugging
-COPY devcontainer/05-use-cases /root/workspace/05-use-cases
-COPY devcontainer/06-security /root/workspace/06-security
+RUN git clone https://github.com/essential-c/exercises.git /root/workspace/exercises
+RUN git clone https://github.com/essential-c/exercises-solutions.git /root/workspace/exercises-solutions
 
 WORKDIR /root/workspace
