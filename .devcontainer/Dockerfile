@@ -10,10 +10,11 @@ RUN cd /tmp/check50 && pip install . --break-system-packages --root-user-action=
 
 RUN mkdir /root/workspace
 
-# TODO more folders
 COPY devcontainer/01-intro /root/workspace/01-intro
 COPY devcontainer/02-basics /root/workspace/02-basics
 COPY devcontainer/03-mm-libc /root/workspace/03-mm-libc
+COPY devcontainer/04-building-debugging /root/workspace/04-building-debugging
+COPY devcontainer/05-use-cases /root/workspace/05-use-cases
 COPY devcontainer/06-security /root/workspace/06-security
 
 WORKDIR /root/workspace
