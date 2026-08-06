@@ -8,6 +8,7 @@ int main(int argc, char **argv) {
     a = 12;      // set a to 12
     b = 20;      // set b to 20
     c = 10 + 10; // set c to 20
+    
     a = b;       // a = 20
     d++;         // d = d + 1
     y *= 2;      // y = y * 2;
