@@ -1,4 +1,4 @@
 {
-	"name": "essential-c-devcontainer",
-	"image": "olivierpierre/essential-c-devcontainer"
+	"name": "essential-c",
+	"image": "olivierpierre/essential-c"
 }
