@@ -6,7 +6,7 @@ int print_help_and_exit(char **argv) {
     exit(-1);
 }
 
-/* Sum the two integers passed as command line integers */
+// Sum the two integers passed as command line parameters
 int main(int argc, char **argv) {
     int a, b;
     
